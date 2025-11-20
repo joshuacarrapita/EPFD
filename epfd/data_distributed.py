@@ -14,12 +14,12 @@ from pathos import multiprocessing as pp
 # from pympler.asizeof import asizeof
 
 
-from data_entropy import COMEP, DOMEP
-from utils_const import DTY_INT, DTY_BOL
+from epfd.data_entropy import COMEP, DOMEP
+from epfd.utils_const import DTY_INT, DTY_BOL
 
 import pyensemble.classify.voting as dv
 import pyensemble.pruning as dp
-import data_entropy as dt
+import epfd.data_entropy as dt
 
 
 

@@ -13,9 +13,9 @@ gc.enable()
 import numpy as np
 from pathos import multiprocessing as pp
 
-from utils_const import DTY_FLT, DTY_INT, DTY_BOL
-from utils_const import GAP_INF, GAP_MID
-from utils_const import check_zero
+from epfd.utils_const import DTY_FLT, DTY_INT, DTY_BOL
+from epfd.utils_const import GAP_INF, GAP_MID
+from epfd.utils_const import check_zero
 
 
 
