@@ -6,6 +6,9 @@
 .idea/
 .vscode/
 .pytest_cache/
+venv/
+*.egg-info
+build/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
