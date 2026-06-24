@@ -30,7 +30,7 @@ import epfd.data_entropy as dt
 
 def element_contrastive_pruning_via_validation(name_pru,
                 nb_cls, nb_pru, y_val, y_cast, epsilon=1e-3, rho=0.5):
-    if nb_pru >= nb_cls:
+    if  nb_pru is not None and nb_pru >= nb_cls:
         return list(range(nb_cls)), None
 
     if name_pru == 'ES':
@@ -40,7 +40,7 @@ def element_contrastive_pruning_via_validation(name_pru,
     elif name_pru == 'KP':
         ys_cast, P       = dp.Kappa_Pruning(               y_cast, y_val, nb_cls, nb_pru)
     elif name_pru == 'OO':
-        ys_cast, P, flag = dp.Orientation_Ordering_Pruning(y_cast, y_val)
+        ys_cast, P, flag = dp.Orientation_Ordering_Pruning(y_cast, y_val, nb_pru)
     elif name_pru == 'RE':
         ys_cast, P       = dp.Reduce_Error_Pruning(        y_cast, y_val, nb_cls, nb_pru)
     elif name_pru == 'GMA' or name_pru == 'GMM':  #'GMM_Algorithm'
